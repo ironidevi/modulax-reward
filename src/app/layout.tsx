@@ -62,8 +62,8 @@ const monaSans = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Modulax docs",
-  description: "Documentation for Modulax",
+  title: "Modulax reward",
+  description: "A reward platform for Modulax",
 }
 
 export default function RootLayout({
