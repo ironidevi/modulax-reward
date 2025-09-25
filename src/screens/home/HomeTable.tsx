@@ -39,7 +39,7 @@ const HomeTable = ({ data }: { data: Holders[] }) => {
 
   return (
     <Table>
-      <TableCaption>A list of your recent invoices.</TableCaption>
+      <TableCaption>A list of modulax reward</TableCaption>
       <TableHeader>
         <TableRow>
           <TableHead className="w-[100px]">Address</TableHead>
@@ -56,8 +56,12 @@ const HomeTable = ({ data }: { data: Holders[] }) => {
                 6
               )}...${holder.owner_address.slice(-4)}`}
             </TableCell>
-            <TableCell>{holder.balance_formatted}</TableCell>
-            <TableCell className="text-right">{holder.reward} MDX</TableCell>
+            <TableCell className="text-brand">
+              {parseFloat(`${holder.balance_formatted}`).toFixed(2)}
+            </TableCell>
+            <TableCell className="text-right font-bold text-brand-blue">
+              {holder.reward} MDX
+            </TableCell>
           </TableRow>
         ))}
       </TableBody>

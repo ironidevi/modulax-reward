@@ -5,6 +5,7 @@ import { fetchHolders, Holders } from "@/modules/ethers.fetcher"
 import { useQuery, UseQueryResult } from "@tanstack/react-query"
 import React, { useEffect } from "react"
 import HomeTable from "./HomeTable"
+import HomeCalculator from "./HomeCalculator"
 
 const HomeScreen = () => {
   const filterQuery = useQuery({
@@ -46,6 +47,8 @@ const HomeScreen = () => {
       <p className="text-center text-lg text-brand-blue">
         TOP GAINER LEADERBOARD
       </p>
+      <div className="h-4"></div>
+      <HomeCalculator />
       <div className="h-4"></div>
       {renderData(filterQuery)}
     </div>
